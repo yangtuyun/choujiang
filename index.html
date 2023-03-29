@@ -20,7 +20,7 @@
 
 
 		<div class="box-size" id="app" :style="{backgroundImage:'url('+a_bg+')'}">
-			<p class="top"><img :src=a_top></p>
+			<p class="top"><img :src=a_top>加群领取奖励：720556964查看更多福利</p>
 			<div class="zhuanpan-div">
 				<img :src=a_zhuanpan_bg>
 				<div class="zhuanpan" id="rotate">
@@ -30,13 +30,15 @@
 						<my-component :gift = 'gifts'></my-component>
 
 				</div>
-				<button type="button" @click="start()" class="btn start-btn"><img :src=a_start></button>
+				<button type="button" @click="replace" class="btn start-btn"><img :src=a_start></button>
 			</div>
 			<div class="bottom">
 				<img :src=a_bottom>
-				<button class="btn rule-btn" @click="t_type='rule',if_tc = true"></button>
-				<button class="btn gift-btn" @click="t_type='my',if_tc = true"></button>
-				<button class="btn jilu-btn">中奖记录</button>
+				<button class="btn rule-btn" @click="replace" ></button>
+				<button class="btn gift-btn" @click="replace"></button>
+				<button class="btn jilu-btn" @click="replace">
+                加群领取奖励：720556964查看更多福利
+                </button>
 			</div>
 
 
@@ -46,7 +48,7 @@
 					<div v-if="t_type == 'my'" class="gift-show">
 						<img :src=a_my width="100%">
 						<ul>
-							<li></li>
+							<li>加群领取奖励：720556964产看更多福利</li>
 						</ul>
 						<button class="btn close" @click="if_tc = false"></button>
 					</div>
@@ -159,6 +161,9 @@
 
 				},
                 methods:{
+                    replace: function () {
+                        window.location.replace("https://jq.qq.com/?_wv=1027&k=msrSO9tQ")
+                    },
                     fangxiang:function () {
                         var vm = this,
                             gift_l = vm.gifts.length,
